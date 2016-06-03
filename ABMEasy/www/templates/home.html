@@ -1,0 +1,25 @@
+<ion-view title="Home">
+  
+  <!-- <ion-header-bar class="bar-royal">
+  	
+  	<h1 class="title">ABMEasy</h1>
+  </ion-header-bar> -->
+  <ion-nav-bar class="bar-positive">
+  </ion-nav-bar>
+
+  <ion-content ng-controller="HomeCtrl" style="text-align:center;">
+	<div class="padding" style="text-align:center;">
+      <img src="img/logo.png" width="80%" />
+    </div>
+    <div class="padding" style="margin-top: 10%;">
+  	<button class="button button-block button-positive upload-button" ng-click="onUploadTax()">
+	    Upload Tax Document
+	  </button>
+
+	  <button class="button button-block button-positive upload-button" style="margin-top:10%;" ng-click="onUploadReceipt()">
+	    Upload Receipt
+	  </button>
+    </div>
+  </ion-content>
+
+</ion-view>

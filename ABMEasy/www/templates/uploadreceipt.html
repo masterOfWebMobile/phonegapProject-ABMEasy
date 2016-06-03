@@ -1,0 +1,41 @@
+<ion-view title="Receipt Document">
+  
+  <!-- <ion-header-bar class="bar-royal">
+  	<h1 class="title">Upload Receipt Document</h1>
+  </ion-header-bar> -->
+
+  <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-chevron-left"></i> Back
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content ng-controller="UpdReceiptDocCtrl" style="text-align:center;">
+  	<div class="list">
+      <div class="padding" style="text-align:center;">
+        <img src="img/logo.png" width="80%" />
+      </div>
+      <div class="padding">
+      </div>
+      <label class="item item-input">
+        <span class="input-label">SubTotal</span>
+        <input type="number" ng-model="receipt.subtotal">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">GST</span>
+        <input type="number" ng-model="receipt.gst">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">PST</span>
+        <input type="number" ng-model="receipt.pst">
+      </label>
+
+    </div>
+    <div class="padding">
+      <button class="button button-block button-positive" ng-click="UploadReceipt(receipt)">
+        Choose Receipt Type
+      </button>
+    </div>
+  </ion-content>
+
+</ion-view>

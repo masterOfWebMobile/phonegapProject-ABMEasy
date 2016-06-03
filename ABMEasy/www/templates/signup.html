@@ -1,0 +1,89 @@
+<ion-view title="Sign Up">
+      
+  <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-chevron-left"></i> Back
+    </ion-nav-back-button>
+  </ion-nav-bar>
+    
+  <ion-content ng-controller="SignUpCtrl">
+    <div class="list">
+      <div class="padding" style="text-align:center;">
+        <img src="img/logo.png" width="80%" />
+      </div>
+      <div class="padding">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" placeholder="Username" ng-model="user.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">First Name</span>
+          <input type="text" placeholder="First Name" ng-model="user.fname">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Last Name</span>
+          <input type="text" placeholder="Last Name" ng-model="user.lname">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Phone</span>
+          <input type="text" placeholder="Phone Number (not required)" ng-model="user.phone">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="text" placeholder="Email address" ng-model="user.email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="Password" ng-model="user.password">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Confirm</span>
+          <input type="password" placeholder="Confirm Password" ng-model="user.confirmpassword">
+        </label>
+      </div>
+      <div class="padding">
+        <ul class="list">
+
+          <li class="item item-toggle" >
+             Use Bookkeeping features
+             <label class="toggle toggle-positive" >
+               <input type="checkbox" ng-model="user.usebookkeeping">
+               <div class="track">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li>
+
+          <li class="item item-toggle" >
+             Use Tax Filing features
+             <label class="toggle toggle-positive" >
+               <input type="checkbox" ng-model="user.usetax">
+               <div class="track">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li>
+
+          <li class="item item-toggle" >
+            Terms of Use
+            <label class="toggle toggle-positive" >
+              <input type="checkbox" ng-model="user.terms">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+        </ul>
+      </div>
+    <div class="padding">
+      <button class="button button-block button-positive" ng-click="onTerms()">
+        Terms of Use
+      </button>
+
+      <button class="button button-block button-positive" ng-click="signup(user)">
+        Sign up
+      </button>
+    </div>
+  </ion-content>
+    
+</ion-view>

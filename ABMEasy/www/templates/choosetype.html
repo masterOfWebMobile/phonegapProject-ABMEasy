@@ -1,0 +1,39 @@
+<ion-view title="Choose Type">
+  <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-chevron-left"></i> Back
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content ng-controller="ChooseTypeCtrl" style="text-align:center;">
+	<div class="padding" style="text-align:center;">
+    <img src="img/logo.png" width="80%" />
+  </div>
+
+  <div class="card" >
+    <!-- <label class="item item-radio" ng-repeat="item in items" >
+      <input ng-model="docType" ng-value="{{item.t}}" type="radio" name="group">
+        <div class="item-content">
+          {{item.t}}
+        </div>
+        <i class="radio-icon ion-checkmark"></i>
+    </label> -->
+    <div class="item item-divider">
+      {{title}}
+    </div>
+    <label class="item item-radio" ng-repeat="item in items" >
+      <ion-radio ng-model="docType" ng-click="onSetDocType('{{item}}')">{{item.t}}</ion-radio>
+    </label>
+  </div>
+
+  <div class="padding" style="margin-top: 10%;">
+    <button class="button button-block button-positive upload-button" ng-click="onUpload()">
+      Upload
+    </button>
+<!--     <button class="button button-block button-assertive upload-button" style="margin-top:5%;" ng-click="onCancelUpload()">
+      Cancel
+    </button> -->
+  </div>
+  </ion-content>
+
+</ion-view>
